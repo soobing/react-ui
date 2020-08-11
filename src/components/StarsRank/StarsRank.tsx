@@ -2,27 +2,26 @@ import React from 'react';
 import styled from 'styled-components';
 
 const MAX_RANK = 5;
-type RankType = 1 | 2 | 3 | 4 | 5;
 interface StarsRankProps {
-  rank: RankType;
+  rank: number;
 }
 
 const Wrapper = styled.div`
   display: grid; 
-  grid-template-columns: repeat(5, 2vw);
-  column-gap: 0.4vw;
+  grid-template-columns: repeat(5,1em);
+  column-gap: 0.3em;
 `;
 
 const Filled = styled.div`
-  width: 2vw;
-  height: 2vw;
+  width: 1em;
+  height: 1em;
   border-radius: 50%;
   background: #ffe500;
 `;
 
 const Unfilled = styled.div`
-  width: 2vw;
-  height: 2vw;
+  width: 1em;
+  height: 1em;
   border-radius: 50%;
   background: #e6e6e6;
 `;
