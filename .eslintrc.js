@@ -40,6 +40,8 @@ module.exports = {
         json: 'never',
       },
     ],
+    'react/require-default-props': 'off',
+    'react/no-array-index-key': 'off',
   },
   settings: {
     'import/resolver': {
