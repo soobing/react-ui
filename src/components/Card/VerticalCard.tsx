@@ -19,9 +19,8 @@ const Wrapper = styled.div<{ type: CardType }>`
   background: #f9f9fb;
   border: 1px solid #ececec;
   border-radius: 0.8em;
-  display: grid; 
+  display: table; 
   grid-template-rows: repeat(2, 50%);
-  height: 500px;
   min-width: 200px;
 `;
 
