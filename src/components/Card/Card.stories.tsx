@@ -34,6 +34,7 @@ export const card = () => {
       <Card type="01" title="Card Title" src={Toy} label={label} author="Cross out" />
       <Card type="02" title="Card Title" src={Toy} label={label} author="Cross out" rank={rank} />
       <Card type="03" title="Card Title" src={Toy} label={label} author="Cross out" rank={rank} description="lorem ipsum dolor sit amet" />
+      <Card type="04" title="Card Title" src={Toy} author="Cross out" rank={rank} description="lorem ipsum dolor sit amet" />
     </Wrapper>
   );
 };

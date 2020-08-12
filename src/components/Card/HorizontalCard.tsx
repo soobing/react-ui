@@ -4,8 +4,6 @@ import styled from 'styled-components';
 import StarsRank from '../StarsRank';
 
 const PXtoVW = (size: number) => `${(100 * size) / 575}vw`; // 575px 기준
-
-type CardType = 'large';
 interface CardProps {
   // loading: boolean;
   src: string;
