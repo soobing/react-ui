@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const Wrapper = styled.p`
   text-align: center;
   font-size: 20px;
+  margin-top: 100px;
 `;
 
 export default function Home() {

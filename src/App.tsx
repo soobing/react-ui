@@ -20,13 +20,33 @@ const Wrapper = styled.div`
   background: ${(props) => props.theme.gray10};
 `;
 
+const Nav = styled.nav`
+  display: flex;
+
+  & > ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: 10%;
+
+    & > li + li {
+      margin-left: 20px;
+    }
+  }
+`;
+
+const Contents = styled.div`
+  margin: 50px 0;
+`;
+
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <Wrapper>
         <Router>
           <div>
-            <nav>
+            <Nav>
               <ul>
                 <li>
                   <Link to="/">Home</Link>
@@ -38,21 +58,22 @@ export default function App() {
                   <Link to="/form">Form</Link>
                 </li>
               </ul>
-            </nav>
+            </Nav>
 
-            {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-            <Switch>
-              <Route exact path="/">
-                <Home />
-              </Route>
-              <Route path="/card">
-                <Card />
-              </Route>
-              <Route path="/form">
-                <Form />
-              </Route>
-            </Switch>
+            <Contents>
+              <Switch>
+                <Route exact path="/">
+                  <Home />
+                </Route>
+                <Route path="/card">
+                  <Card />
+                </Route>
+                <Route path="/form">
+                  <Form />
+                </Route>
+              </Switch>
+
+            </Contents>
           </div>
         </Router>
       </Wrapper>
