@@ -10,7 +10,6 @@ interface FormProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
 
 const Wrapper = styled.div`
   display: flex;
-  grid-template-columns: auto auto;
 `;
 
 const Button = styled.button`
