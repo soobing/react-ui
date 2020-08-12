@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/soobing/react-ui/issues"
   },
-  "homepage": "https://github.com/soobing/react-ui/",
+  "homepage": "https://soobing.github.io/react-ui/",
   "dependencies": {
     "@storybook/addon-actions": "^6.0.4",
     "@storybook/addon-docs": "^6.0.4",
