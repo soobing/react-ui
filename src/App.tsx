@@ -15,7 +15,7 @@ import theme from './styles/theme';
 
 const Wrapper = styled.div`
   max-width: 1950px;
-  height: 100%;
+  height: 100vh;
   margin: auto;
   background: ${(props) => props.theme.gray10};
 `;

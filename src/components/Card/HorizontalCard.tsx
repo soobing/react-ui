@@ -36,12 +36,12 @@ const ImgThumbnail = styled.div`
     border-bottom-left-radius: 0.8em;
   }
 `;
-
-const Description = styled.p`
+const P = styled.p`
   text-overflow: ellipsis;
-  overflow: hidden; 
+  overflow: hidden;
   white-space: nowrap;
 `;
+const Description = styled(P)``;
 const Contents = styled.div`
   padding: 5% 10%;
 `;
@@ -56,8 +56,7 @@ const Footer = styled(Contents)`
   flex-direction: row;
   justify-content: space-between;
 `;
-const Author = styled.div`
-`;
+const Author = styled(P)``;
 
 const HorizontalCard: React.FC<CardProps> = ({ title, src, rank, description, author }: CardProps) => (
   <Wrapper>

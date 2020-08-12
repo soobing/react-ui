@@ -12,10 +12,22 @@ import Toy from '../../assets/toy.jpg';
 // import Toy3 from '../../assets/toy3.jpg';
 
 const Wrapper = styled.div`
-  display: grid; 
-  grid-template-columns: 1fr 1fr 1fr 5fr;
-  grid-gap: 10px;
+  display: flex;
+  flex-direction: row;
+
+  & > div {
+    width: 25%;
+    
+    :nth-of-type(4) {
+      height: 200px;
+    }
+  }
+
+  & > div + div {
+    margin-left: 10px;
+  }
 `;
+
 const HorWrapper = styled.div`
   height: 50%;
 `;
