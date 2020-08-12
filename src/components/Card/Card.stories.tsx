@@ -13,8 +13,11 @@ import Toy from '../../assets/toy.jpg';
 
 const Wrapper = styled.div`
   display: grid; 
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 5fr;
   grid-gap: 10px;
+`;
+const HorWrapper = styled.div`
+  height: 50%;
 `;
 
 export default {
@@ -34,7 +37,9 @@ export const card = () => {
       <Card type="01" title="Card Title" src={Toy} label={label} author="Cross out" />
       <Card type="02" title="Card Title" src={Toy} label={label} author="Cross out" rank={rank} />
       <Card type="03" title="Card Title" src={Toy} label={label} author="Cross out" rank={rank} description="lorem ipsum dolor sit amet" />
-      <Card type="04" title="Card Title" src={Toy} author="Cross out" rank={rank} description="lorem ipsum dolor sit amet" />
+      <HorWrapper>
+        <Card type="04" title="Card Title" src={Toy} author="Cross out" rank={rank} description="lorem ipsum dolor sit amet" />
+      </HorWrapper>
     </Wrapper>
   );
 };

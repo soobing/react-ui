@@ -19,7 +19,7 @@ const Wrapper = styled.div`
   border-radius: 0.8em;
   display: grid; 
   grid-template-columns: repeat(2, 50%);
-  min-width: 200px;
+  min-width: 400px;
 `;
 
 const Title = styled.h1`
