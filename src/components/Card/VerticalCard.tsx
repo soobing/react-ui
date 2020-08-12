@@ -1,23 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import StarsRank from '../StarsRank';
-
 const PXtoVW = (size: number) => `${(100 * size) / 575}vw`; // 575px 기준
 
-type CardType = 'small' | 'medium' | 'large';
 interface CardProps {
   // loading: boolean;
-  type: CardType;
   src: string;
-  rank?: number;
-  label?: string;
+  label: string;
   title: string;
-  description?: string;
   author: string;
+  children?: React.ReactNode;
 }
 
-const Wrapper = styled.div<{ type: CardType }>`
+const Wrapper = styled.div`
   background: #f9f9fb;
   border: 1px solid #ececec;
   border-radius: 0.8em;
@@ -65,11 +60,6 @@ const ImgThumbnail = styled.div`
   }
 `;
 
-const Description = styled.p`
-  text-overflow: ellipsis;
-  overflow: hidden; 
-  white-space: nowrap;
-`;
 const Contents = styled.div`
   padding: 5% 10%;
 `;
@@ -80,39 +70,23 @@ const Footer = styled(Contents)`
   border-top: 1px solid #ececec;
 `;
 
-const VerticalCard: React.FC<CardProps> = (
-  { label, type, title, src, rank, description, author }: CardProps,
-) => {
-  const showFooter = type === 'medium' || type === 'large';
-  const showStarsRanking = type === 'medium' || type === 'large';
-  const showDescription = type === 'large';
-
-  return (
-    <Wrapper type={type}>
-      <ImgThumbnail>
-        <img src={src} alt={title} />
-      </ImgThumbnail>
-      <div>
-        <Body>
-          <Label>{label}</Label>
-          <Title>{title}</Title>
-          <Highlight>
-            <span>Highlight </span>
-            <span>{author}</span>
-          </Highlight>
-        </Body>
-        {
-          showFooter
-          && (
-            <Footer>
-              {showStarsRanking && rank && <StarsRank rank={rank} />}
-              {showDescription && description && <Description>{description}</Description>}
-            </Footer>
-          )
-        }
-      </div>
-    </Wrapper>
-  );
-};
+const VerticalCard: React.FC<CardProps> = ({ src, label, title, author, children = null }: CardProps) => (
+  <Wrapper>
+    <ImgThumbnail>
+      <img src={src} alt={title} />
+    </ImgThumbnail>
+    <div>
+      <Body>
+        <Label>{label}</Label>
+        <Title>{title}</Title>
+        <Highlight>
+          <span>Highlight </span>
+          <span>{author}</span>
+        </Highlight>
+      </Body>
+      {children && <Footer>{children}</Footer>}
+    </div>
+  </Wrapper>
+);
 
 export default VerticalCard;

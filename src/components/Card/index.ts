@@ -1,4 +1,6 @@
-import VerticalCard from './VerticalCard';
-import HorizontalCard from './HorizontalCard';
+import Card from './Card';
+import Card01 from './Card01';
+import Card02 from './Card02';
+import Card03 from './Card03';
 
-export { VerticalCard, HorizontalCard };
+export { Card, Card01, Card02, Card03 };
