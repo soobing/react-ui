@@ -42,6 +42,7 @@ module.exports = {
     ],
     'react/require-default-props': 'off',
     'react/no-array-index-key': 'off',
+    'react/jsx-props-no-spreading': 'off',
   },
   settings: {
     'import/resolver': {

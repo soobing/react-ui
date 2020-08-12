@@ -3,7 +3,7 @@ import React, {
 } from 'react';
 import styled from 'styled-components';
 
-interface FormProps {
+interface FormProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   maxLength: number;
   initValue: string;
 }
@@ -33,7 +33,8 @@ const Count = styled.div`
   right: 0;
 `;
 
-const Form: React.FC<FormProps> = ({ initValue, maxLength }: FormProps) => {
+const Form: React.FC<FormProps> = ({ initValue, ...textareaProps }: FormProps) => {
+  const { maxLength } = textareaProps;
   const [savedValue, setValueSaved] = useState(initValue);
   const [value, setValue] = useState(savedValue);
 
@@ -42,13 +43,13 @@ const Form: React.FC<FormProps> = ({ initValue, maxLength }: FormProps) => {
     <Wrapper>
       <Text>
         <textarea
+          {...textareaProps}
           value={value}
           onChange={(e) => {
             // 한글 maxLength 조정
             if (e.target.value.length > maxLength) return;
             setValue(e.target.value);
           }}
-          maxLength={maxLength}
         />
         <Count>{maxLength - value.length}</Count>
       </Text>
