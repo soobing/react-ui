@@ -2,18 +2,10 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-const Hero = styled.div`
-  position: absolute;
-  width: 213px;
-  height: 252px;
-  left: 48.33px;
-  top: 310.71px;
-`;
+const Wrapper = styled.div``;
 
 export default function Home() {
   return (
-    <Hero>
-      This is home
-    </Hero>
+    <Wrapper>안녕하세요! 홈 입니다</Wrapper>
   );
 }

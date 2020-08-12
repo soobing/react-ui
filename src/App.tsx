@@ -14,10 +14,9 @@ import './styles/global.css';
 import theme from './styles/theme';
 
 const Wrapper = styled.div`
-  max-width: 375px;
-  height: 812px;
+  max-width: 1950px;
+  height: 100%;
   margin: auto;
-  position: relative;
   background: ${(props) => props.theme.gray10};
 `;
 
