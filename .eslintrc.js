@@ -43,6 +43,8 @@ module.exports = {
     'react/require-default-props': 'off',
     'react/no-array-index-key': 'off',
     'react/jsx-props-no-spreading': 'off',
+    'react/jsx-indent': 'off',
+    'max-len': 'off', // TODO: prettier 적용후 없애기
   },
   settings: {
     'import/resolver': {

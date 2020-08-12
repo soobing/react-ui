@@ -4,7 +4,9 @@ import {
 } from '@storybook/addon-knobs';
 
 import styled from 'styled-components';
-import Card from './VerticalCard';
+import {
+  VerticalCard,
+} from './index';
 import Toy from '../../assets/toy.jpg';
 import Toy2 from '../../assets/toy2.jpg';
 import Toy3 from '../../assets/toy3.jpg';
@@ -16,8 +18,8 @@ const Wrapper = styled.div`
 `;
 
 export default {
-  title: 'components|Card',
-  component: Card,
+  title: 'components|Card/VerticalCard',
+  component: VerticalCard,
   decorators: [withKnobs],
 };
 
@@ -26,10 +28,10 @@ export const card = () => {
 
   return (
     <Wrapper>
-      <Card type="large" title="Card Title" src={Toy} label={label} rank={5} description="lorem ipsum dolor sit amet" author="Cross out" />
-      <Card type="medium" title="Card Title" src={Toy2} label={label} rank={3} author="Cross out" />
-      <Card type="small" title="Card Title" src={Toy3} label={label} author="Cross out" />
-      <Card type="small" title="Card Title" src={Toy} label={label} author="Cross out" />
+      <VerticalCard type="large" title="Card Title" src={Toy} label={label} rank={5} description="lorem ipsum dolor sit amet" author="Cross out" />
+      <VerticalCard type="medium" title="Card Title" src={Toy2} label={label} rank={3} author="Cross out" />
+      <VerticalCard type="small" title="Card Title" src={Toy3} label={label} author="Cross out" />
+      <VerticalCard type="small" title="Card Title" src={Toy} label={label} author="Cross out" />
     </Wrapper>
   );
 };
