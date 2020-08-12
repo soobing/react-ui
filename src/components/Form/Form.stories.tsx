@@ -8,7 +8,7 @@ import Form from './Form';
 
 const Wrapper = styled.div`
   display: grid; 
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 70px);
   grid-gap: 10px;
 `;
 
@@ -20,9 +20,9 @@ export default {
 
 export const forms = () => (
   <Wrapper>
-    <Form maxLength={3} />
-    <Form maxLength={3} />
-    <Form maxLength={3} />
+    <Form maxLength={3} initValue="" />
+    <Form maxLength={3} initValue="abc" />
+    <Form maxLength={3} initValue="??" />
   </Wrapper>
 );
 
