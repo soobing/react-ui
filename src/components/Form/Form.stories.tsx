@@ -20,10 +20,10 @@ export default {
 
 export const forms = () => (
   <Wrapper>
-    <Form maxLength={10} initValue="" placeholder="아이디어스" />
-    <Form maxLength={10} initValue="abc" placeholder="아이디어스" />
-    <Form maxLength={10} placeholder="disabled" initValue="" disabled />
-    <Form maxLength={10} initValue="readOnly" readOnly />
+    <Form placeholder="아이디어스" />
+    <Form initValue="abc" />
+    <Form placeholder="disabled" disabled />
+    <Form initValue="readOnly" readOnly />
   </Wrapper>
 );
 

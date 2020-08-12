@@ -4,8 +4,8 @@ import React, {
 import styled from 'styled-components';
 
 interface FormProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
-  maxLength: number;
-  initValue: string;
+  maxLength?: number;
+  initValue?: string;
 }
 
 const Wrapper = styled.div`
@@ -33,8 +33,8 @@ const Count = styled.div`
   right: 0;
 `;
 
-const Form: React.FC<FormProps> = ({ initValue, ...textareaProps }: FormProps) => {
-  const { maxLength } = textareaProps;
+const Form: React.FC<FormProps> = ({ initValue = '', ...textareaProps }: FormProps) => {
+  const { maxLength = 10 } = textareaProps;
   const [savedValue, setValueSaved] = useState(initValue);
   const [value, setValue] = useState(savedValue);
 
