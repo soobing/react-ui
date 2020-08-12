@@ -6,23 +6,25 @@ interface StarsRankProps {
   rank: number;
 }
 
-const Wrapper = styled.div`
-  display: grid; 
-  grid-template-columns: repeat(5,1em);
-  column-gap: 0.3em;
-`;
-
-const Filled = styled.div`
+const Dot = styled.div`
   width: 1em;
   height: 1em;
   border-radius: 50%;
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  & > ${Dot} + ${Dot} {
+    margin-left: 0.2em;
+  }
+`;
+
+const Filled = styled(Dot)`
   background: #ffe500;
 `;
 
-const Unfilled = styled.div`
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
+const Unfilled = styled(Dot)`
   background: #e6e6e6;
 `;
 

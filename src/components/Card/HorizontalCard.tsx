@@ -1,9 +1,19 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {
+  css,
+} from 'styled-components';
 
 import StarsRank from '../StarsRank';
 
 const PXtoVW = (size: number) => `${(100 * size) / 575}vw`; // 575px 기준
+const PXtoVW2 = (key: string, size: number, maxSize: number) => css`
+  ${key}: ${(100 * size) / 575}vw;
+
+  @media (max-width: 400px) {
+    ${key}: ${maxSize}px;
+  }
+`;
+
 interface CardProps {
   // loading: boolean;
   src: string;
