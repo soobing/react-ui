@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 import StarsRank from '../StarsRank';
 
+const PXtoVW = (size: number) => `${(100 * size) / 575}vw`; // 575px 기준
+
 type CardType = 'small' | 'medium' | 'large';
 interface CardProps {
   // loading: boolean;
@@ -25,21 +27,21 @@ const Wrapper = styled.div<{ type: CardType }>`
 `;
 
 const Title = styled.h1`
-  font-size: 1.2em;
+  font-size: ${PXtoVW(16)};
 `;
 
 const Label = styled.h2`
-  font-size: 1em;
+  font-size: ${PXtoVW(12)};
   color: gray;
   font-weight: 300;
 `;
 
 const Highlight = styled.h2`
-  font-size: 1em;
+  font-size: ${PXtoVW(12)};
   font-weight: normal;
 
   & > span {
-    font-size: 1em;
+    font-size: ${PXtoVW(12)};
     font-weight: 300;
 
     :nth-of-type(1) {
@@ -69,7 +71,7 @@ const Description = styled.p`
   white-space: nowrap;
 `;
 const Contents = styled.div`
-  padding: 10%;
+  padding: 5% 10%;
 `;
 
 const Body = styled(Contents)``;
