@@ -17,8 +17,8 @@ const Wrapper = styled.div`
   background: #f9f9fb;
   border: 1px solid #ececec;
   border-radius: 0.8em;
-  display: grid; 
-  grid-template-columns: repeat(2, 50%);
+  display: flex; 
+  flex-direction: row;
   min-width: 400px;
 `;
 
