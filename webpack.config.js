@@ -12,7 +12,7 @@ module.exports = {
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/react-ui/',
+    publicPath: '/',
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.css'],
